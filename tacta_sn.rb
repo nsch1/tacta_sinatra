@@ -10,6 +10,10 @@ get "/contacts" do
 	erb :'contacts/index'
 end
 
+get "/contacts/new" do
+	erb :'contacts/new'
+end
+
 get "/contacts/:index" do
 	@index = params[:index].to_i
 	contacts = read_contacts
